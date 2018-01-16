@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Victor Cormier</title>
+        <meta name="description" content="Victor Cormier is a Graphic Designer / Art Director in Houston TX">
+        <link rel="stylesheet" href="/main.css">
+    </head>
+    
+    <style>
+        @import url("https://use.typekit.net/uxr0uyp.css");
+    </style>
+    
+    <body>
+      
+        
+        <div class="container">
+            
+        <div class="titlebar">
+            <p><a href="/index.html"><img src="../../../images/top/Logo2.png" style="height:3em;margin:-1.4em -.25em;"></a> <span class="title"></span></p>
+        </div>
+            
+            <div class="full-section" id="header">
+                
+                <a href="1.png">
+                    <div class="big-image">
+                        <img src="1.png">
+                        <h3>After</h3>
+                        <p>Post-redesign, as originally published</p>
+                    </div>
+                </a>
+               
+                
+                <a href="2.png">
+                    <div class="big-image">
+                        <img src="2.png">
+                        <h3>Before</h3>
+                        <p>Previous, 2008 layout</p>
+                    </div>
+                </a>
+                
+            </div>
+            
+            <div class="half-section" id="about">
+                <h2 class="title"></h2>
+                <p>In 2012, Schlumberger management decided to refresh the <a href="slb.com">slb.com</a> homepage. I handled the UI and layout work, after content priorities and decisions were finalized by the larger team. This design is still in use, today.</p>
+            </div>
+            
+            <div class="half-section" id="workhistory">
+                <h2 style="margin-bottom:.33em;">Info</h2>
+                <ul>
+                    <li style="list-style:none;margin-left:-1.5em;">
+                        <span class="dates">Web design</span>
+                        <span class="dates">Graphic design</span>
+                    </li>
+                    <li>Schlumberger, ltd.</li>
+                    <li>Late 2012</li>
+                </ul>
+            </div>
+
+                <div class="full-section" id="footer">
+                    <p>© 2018 Victor Cormier. Coded + designed by hand.</p> 
+                    <img src="../../../images/top/Logo2.png">
+                </div>
+            
+        </div>
+        
+        
+    </body>
+
+<script>
+    var pathArray = window.location.pathname.split( '/' );
+    var tempPageTitle = pathArray[3];
+    var pageTitle = tempPageTitle.split('%20').join(' ')
+    
+    var items = document.getElementsByClassName("title"),
+    i, len;
+    for (i = 0, len = items.length; i < len; i++) {
+        items[i].innerHTML = pageTitle;
+    }
+</script>
+    
+</html>

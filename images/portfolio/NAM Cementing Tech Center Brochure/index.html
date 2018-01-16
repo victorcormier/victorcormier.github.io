@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Victor Cormier</title>
+        <meta name="description" content="Victor Cormier is a Graphic Designer / Art Director in Houston TX">
+        <link rel="stylesheet" href="/main.css">
+    </head>
+    
+    <style>
+        @import url("https://use.typekit.net/uxr0uyp.css");
+        #header img {border:none;}
+    </style>
+    
+    <body>
+      
+        
+        <div class="container">
+            
+        <div class="titlebar">
+            <p><a href="/index.html"><img src="../../../images/top/Logo2.png" style="height:3em;margin:-1.4em -.25em;"></a> <span class="title"></span></p>
+        </div>
+            
+            <div class="full-section" id="header">
+                    
+
+                <div class="half-width">
+                    
+                    <a href="A%20(1).jpg">
+                    <div class="big-image">
+                        <img src="A%20(1).jpg">
+                    </div>
+                    </a>
+                    
+                    <a href="A%20(7).jpg">
+                    <div class="big-image">
+                        <img src="A%20(7).jpg">
+                    </div>
+                    </a>
+                    
+                </div> 
+                
+                <a href="A%20(2).jpg">
+                <div class="big-image">
+                    <img src="A%20(2).jpg">
+                </div>
+                </a>
+                
+                <a href="A%20(3).jpg">
+                <div class="big-image">
+                    <img src="A%20(3).jpg">
+                </div>
+                </a>
+                
+                <a href="A%20(4).jpg">
+                <div class="big-image">
+                    <img src="A%20(4).jpg">
+                </div>
+                </a>
+                
+                <a href="A%20(5).jpg">
+                <div class="big-image">
+                    <img src="A%20(5).jpg">
+                </div>
+                </a>
+                
+                <a href="A%20(6).jpg">
+                <div class="big-image">
+                    <img src="A%20(6).jpg">
+                </div>
+                </a>
+
+            </div>
+            
+            <div class="half-section" id="about">
+                <h2 class="title"></h2>
+                <p>This project is a good example of a standard 9x12" Schlumberger print brochure of the time. Stake-holder needs collateral for his/her sales team, doesn't have much to offer, timing is tight, etc. Traditionally a highly-templatized company, it was a constant design challenge to try to keep layouts fresh and engaging but still consistent with the wider group and its collective visual history.</p>
+            </div>
+            <div class="half-section" id="workhistory">
+                <h2 style="margin-bottom:.33em;">Info</h2>
+                <ul>
+                    <li style="list-style:none;margin:0 0 .75em -1.5em;">
+                        <span class="dates">Art Direction</span>
+                        <span class="dates">Print Layout</span>
+                    </li>
+                    <li>Schlumberger</li>
+                    <li>2013</li>
+                </ul>
+            </div>
+
+                <div class="full-section" id="footer">
+                    <p>© 2018 Victor Cormier. Coded + designed by hand.</p> 
+                    <img src="../../../images/top/Logo2.png">
+                </div>
+            
+        </div>
+        
+        
+    </body>
+
+<script>
+    var pathArray = window.location.pathname.split( '/' );
+    var tempPageTitle = pathArray[3];
+    var pageTitle = tempPageTitle.split('%20').join(' ')
+    
+    var items = document.getElementsByClassName("title"),
+    i, len;
+    for (i = 0, len = items.length; i < len; i++) {
+        items[i].innerHTML = pageTitle;
+    }
+</script>
+    
+</html>
