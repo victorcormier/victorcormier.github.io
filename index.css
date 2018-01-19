@@ -148,13 +148,31 @@ p {
     vertical-align: -.17em;
 }
 
+.intro {
+    color:#005a9b;
+    font-size:3em;
+    font-weight:100;
+    line-height: 1em;
+    margin: .4em 0 0 0;
+    
+}
+
+#bigbold {
+    color:#3db8e6;
+    font-size:1em;
+    font-weight: 900;
+    vertical-align: -.05em;
+    margin:0 .1em 0 .15em;
+}
+
 .container {
     display: grid;
     padding: 0em 4em;
-    grid-template-columns: 10fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-column-gap: 2em;
     grid-template-areas: 
+        "header header"
         "about history"
         "portfolio portfolio"
         "footer footer"
@@ -166,8 +184,9 @@ p {
 }
 
 #header {
+    grid-area: header;
     color:black;
-    grid-area: portfolio;
+    margin-top:4em;
 }
 
 #header p {
@@ -180,7 +199,55 @@ p {
 }
 
 #workhistory {
-    grid-area: info;
+    grid-area: history;
+}
+
+#portfolio {
+    grid-area: portfolio;
+}
+
+.portfolio-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 2em;
+    margin: 1.5em 0 0 0;
+}
+
+.portfolio-item {
+    min-width:200px;
+    max-width:250px;
+    border: 1px solid #fff3df;
+    padding: 1em 1em .75em 1em;
+    margin: 0 -1em;
+    transition: all 0.25s ease-out;
+    
+}
+
+.portfolio-item p {
+    margin-bottom: .15em;
+}
+
+.portfolio-item:hover {
+    border-color: #005a9b;
+    border-width: 1px 1px .5em 1px;
+    margin-top:-.5em;
+}
+
+.portfolio-item:active {
+    background: #f4debb;
+    border-bottom: 1px solid #005a9b;
+    margin-top:-1em;
+}
+
+.portfolio-thumbnail {
+    margin: 0 0 -.5em 0;
+}
+
+.portfolio-thumbnail img {
+    width:100%;
+    height:auto;
+    border: 1px solid rgba(255, 159, 0, 0.15);
 }
 
 #footer {
@@ -225,7 +292,7 @@ p {
     left:0;
     width:100%;
     border-bottom: 1px solid #f4debb;
-    padding: .5em .5em .5em 0em;
+    padding: .5em;
     background: #fff3df;
     overflow: hidden;
     position: fixed;
@@ -274,99 +341,199 @@ p {
     margin:.5em 0 0 0;
 }
 
-#content-container {
-    grid-area: content;
-}
-
 @media (max-width: 635px) {
     
     .container {
         padding: 2em;
         grid-template-columns: 1fr;
         grid-template-areas:
+            "header"
+            "about"
+            "history"
             "portfolio"
-            "content"
             "footer";
+    }
+    
+    .intro {
+        border-bottom: 1px dotted grey;
+        padding-bottom: 1.25em;
+        margin-bottom: .5em;
+        font-size: 1.7em;
     }
     
     #about {
         margin:0;
     }
     
+    h1 {
+        font-size:20.5vw;
+    }
+    
+    .intro {
+        font-size:6.7vw;
+    }
+    
     h2 {
-        margin:1em 0 .25em 0;
-        font-size: 14.5vw;
+        margin:1em 0 0 0;
+        padding-top:0em;
+        border:none;
+        font-size: 3.25em;
     }
     
-    #header {
-        margin-top:1em;
-        padding-top: 0;
+    p {
+        margin-top: 1em;
     }
     
-    .half-width {
-        grid-column-gap:1em;
+    .portfolio-item p {
+        margin-top: 0;
+    }
+    
+    h2::after {
+        content: "...";
+        color:#f4debb;
+        font-size:.75em;
+        position: relative;
+        top:.1em;
+        float:right;
+    }
+    
+    .hidden {
+        display:none;
+    }
+    
+    .hidden:target {
+        display: inherit;
+    }
+
+    .hidden:before {
+        content: "";
+        display: block;
+        height: 4em;
+        margin: -4em 0 0 0;
+}
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-item {
+        max-width: 100%;
     }
     
     #footer {
-        font-size:.8em;
+        font-size: 0.8em;
+    }
+    
+    #footer {
+        padding:0;
+    }
+    
+    #footer img {
+        top:.8em;
+        position: relative;
     }
     
 }
 
-@media (min-width: 635px) {
+@media (min-width: 635px) and (max-width: 775px) {
     
-     .container {
-        grid-template-areas: 
-            "content"
-            "portfolio"
-            "footer"; 
-    }
-    
-    h2 {
-        border:none;
-    }
-    
-    #content-container {
-        grid-template-columns:1000fr 1fr;
-        display:grid;
-        grid-template-areas:
-            "about info";
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1275px) {
     
     body {
         max-width:100vw;
     }
     
     .container {
-        grid-template-columns: 1fr 1.65fr;
+        grid-template-columns: .5fr .5fr 1fr;
         grid-template-areas: 
-            "content portfolio"
-            "footer footer"; 
-        grid-column-gap:4em;
+            "header header portfolio"
+            "about history portfolio"
+            "footer footer portfolio"; 
         padding: 4em;
+        margin:0 auto;
     }
     
-    h2 {
-        margin-top:0;
+    #logo-header {
+        grid-area: header;
+    }
+        
+    #about {
+        grid-area: about;
     }
     
-    #content-container {
-        display:block;
-        max-width: 27em;
-        margin: 0 0 0 auto;
+    #workhistory {
+        grid-area: history;
+    }
+    
+    #portfolio {
+        grid-area: portfolio;
+        background: #222222;
+        color:white;
+        padding: 0em 4em 2em 4em;
+        margin:-4em -4em -4em 2em;
+        background-size: 
+        2em 2em, 
+        3em 3em, 
+        4em 4em, 
+        5em 5em;       
+    background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+        radial-gradient(rgba(255, 219, 158, 0.06) 1px, transparent 1px), 
+        radial-gradient(rgba(164, 223, 237, 0.1) 1px, transparent 1px), 
+        radial-gradient(rgba(255, 180, 223, 0.07) 1px, transparent 1px);
     }
     
     #header {
-        max-width: 50em;
+        grid-area: portfolio;
     }
     
-    #footer {
-        
+    #portfolio h2 {
+        border: none;
+        margin: .25em 0 .25em 0;
+        color:#fff3df;
     }
-            
+    
+    #portfolio h3 {
+        color:#fff3df;
+    }
+    
+    #portfolio p {
+        color: white;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .portfolio-item {
+        border-color: #222222;
+    }
+    
+    .portfolio-item:hover {
+        border-color: #479cd9;
+    }
+    
+    .portfolio-item .dates {
+        color:#f4debb;
+    }
+    
+    .portfolio-item img{
+        border:none;
+    }
+
+}
+
+@media (min-width: 1495px) {
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
 
