@@ -35,8 +35,7 @@ h1 {
     letter-spacing: -.01em;
     font-family: "source-serif-pro", serif;
     font-weight: 900;
-    margin: 1.5em 0 0 0;
-    padding: 0;
+    margin: .75em 0 0 0;
 }
 
 h2 {
@@ -183,18 +182,13 @@ p {
 }
 
 #logo-header {
-    grid-area: header;    
-}
-
-#header {
     grid-area: header;
-    color:black;
-    margin-top:4em;
 }
 
-#header p {
-    margin-bottom: .5em;
+#logo-header img {
+    margin:-190px -250px;
 }
+
 
 #about {
     grid-area: about;
@@ -344,6 +338,10 @@ p {
     margin:.5em 0 0 0;
 }
 
+#content {
+
+}
+
 @media (max-width: 635px) {
     
     body {
@@ -354,11 +352,8 @@ p {
         padding: 2em;
         grid-template-columns: 1fr;
         grid-template-areas:
-            "header"
-            "about"
-            "history"
-            "portfolio"
-            "footer";
+            "content"
+            "portfolio";
     }
     
     .intro {
@@ -428,24 +423,37 @@ p {
     }
     
     #footer {
-        font-size: 0.8em;
+        display:none;
     }
-    
-    #footer {
-        padding:0;
-    }
-    
-    #footer img {
-        top:.8em;
-        position: relative;
-    }
-    
 }
 
-@media (min-width: 635px) and (max-width: 775px) {
+@media (min-width: 635px) {
     
     .portfolio-grid {
         grid-template-columns: 1fr 1fr;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "content"
+            "portfolio";
+        padding-bottom:4em;
+    }
+    
+    #content {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap:2em;
+        grid-template-areas: 
+            "header header"
+            "about history"
+            "footer footer";
+        align-content:start;
+    }
+    
+    #footer {
+        display: none;
     }
 
 }
@@ -457,32 +465,28 @@ p {
     }
     
     .container {
-        grid-template-columns: .5fr .5fr 1fr;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-            "header header portfolio"
-            "about history portfolio"
-            "footer footer portfolio"; 
+            "content portfolio"; 
         padding: 4em;
         margin:0 auto;
     }
     
-    #logo-header {
-        grid-area: header;
-    }
-        
-    #about {
-        grid-area: about;
+    #content {
+        position: fixed;
+        max-width: 44.5vw;
+        padding:4em;
+        height:100vh;
+        overflow-y: auto;
     }
     
-    #workhistory {
-        grid-area: history;
-    }
+    #content::-webkit-scrollbar { width: 0 !important }
     
     #portfolio {
-        grid-area: portfolio;
         background: #222222;
         color:white;
-        padding: 0em 4em 2em 4em;
+        padding: 1em 4em 4em 4em;
         margin:-4em -4em -4em 2em;
         background-size: 
         2em 2em, 
@@ -494,10 +498,6 @@ p {
         radial-gradient(rgba(255, 219, 158, 0.06) 1px, transparent 1px), 
         radial-gradient(rgba(164, 223, 237, 0.1) 1px, transparent 1px), 
         radial-gradient(rgba(255, 180, 223, 0.07) 1px, transparent 1px);
-    }
-    
-    #header {
-        grid-area: portfolio;
     }
     
     #portfolio h2 {
@@ -538,6 +538,11 @@ p {
     
     .portfolio-item img{
         border:none;
+    }
+    
+    #footer {
+        display: block;
+        margin:4em 0 8em 0;
     }
 
 }
