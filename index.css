@@ -2,6 +2,7 @@
 html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
+    font-size:16px;
     margin:0;
     padding:0;
     background:#fff3df;
@@ -239,7 +240,7 @@ p {
 .portfolio-item:active {
     background: #f4debb;
     border-bottom: 1px solid #005a9b;
-    margin-top:-1em;
+    margin-top:0em;
 }
 
 .portfolio-thumbnail {
@@ -523,6 +524,12 @@ p {
     
     .portfolio-item:hover {
         border-color: #479cd9;
+    }
+    
+    .portfolio-item:active {
+        background: black;
+        border-bottom: 1px solid #479cd9;
+        margin-top:0em;
     }
     
     .portfolio-item .dates {
