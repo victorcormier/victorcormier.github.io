@@ -343,6 +343,10 @@ p {
 
 @media (max-width: 635px) {
     
+    body {
+        font-size: .75em;
+    }
+    
     .container {
         padding: 2em;
         grid-template-columns: 1fr;
