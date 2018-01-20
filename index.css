@@ -471,7 +471,7 @@ p {
     
     .container {
         display:grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         grid-template-areas: 
             "content portfolio"; 
         padding: 4em;
@@ -484,9 +484,13 @@ p {
         top: 0em;
         height: 100vh;
         margin: -4em 0;
-        padding-bottom: 0em;
-        box-sizing: border-box;
+        padding: 0 4em 4em 4em;
         overflow-y: scroll;
+        box-sizing: border-box;
+        max-width:60em;
+        margin-left:auto;
+        margin-right:auto;
+        
     }
     
     #portfolio {
@@ -554,7 +558,7 @@ p {
 
 }
 
-@media (min-width: 1495px) {
+@media (min-width: 1615px) {
     
     .portfolio-grid {
         grid-template-columns: 1fr 1fr 1fr;
