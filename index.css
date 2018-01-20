@@ -16,7 +16,12 @@ html {
         radial-gradient(rgba(255, 219, 158, 0.98) 1px, transparent 1px), 
         radial-gradient(rgba(164, 223, 237, 0.41) 1px, transparent 1px), 
         radial-gradient(rgba(255, 180, 223, 0.32) 1px, transparent 1px);
+        -ms-overflow-style: none;  // IE 10+
+        overflow: -moz-scrollbars-none;  // Firefox
 }
+
+html::-webkit-scrollbar { width: 0 !important }
+
 body {
     max-width: 51.0em;
     color:black;
@@ -338,11 +343,11 @@ p {
     margin:.5em 0 0 0;
 }
 
-#content {
-
+#content::-webkit-scrollbar { 
+    width: 0 !important 
 }
 
-@media (max-width: 635px) {
+@media (max-width: 500px) {
     
     body {
         font-size: 1em;
@@ -427,7 +432,7 @@ p {
     }
 }
 
-@media (min-width: 635px) {
+@media (min-width: 550px) {
     
     .portfolio-grid {
         grid-template-columns: 1fr 1fr;
@@ -471,17 +476,18 @@ p {
             "content portfolio"; 
         padding: 4em;
         margin:0 auto;
+        grid-column-gap: 2em;
     }
     
     #content {
-        position: fixed;
-        max-width: 44.5vw;
-        padding:4em;
-        height:100vh;
-        overflow-y: auto;
+        position: sticky;
+        top: 0em;
+        height: 100vh;
+        margin: -4em 0;
+        padding-bottom: 0em;
+        box-sizing: border-box;
+        overflow-y: scroll;
     }
-    
-    #content::-webkit-scrollbar { width: 0 !important }
     
     #portfolio {
         background: #222222;
@@ -542,7 +548,8 @@ p {
     
     #footer {
         display: block;
-        margin:4em 0 8em 0;
+        margin:4em 0 0 0;
+        padding:1em 0 0 0;
     }
 
 }

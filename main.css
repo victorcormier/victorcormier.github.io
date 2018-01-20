@@ -16,7 +16,12 @@ html {
         radial-gradient(rgba(255, 219, 158, 0.98) 1px, transparent 1px), 
         radial-gradient(rgba(164, 223, 237, 0.41) 1px, transparent 1px), 
         radial-gradient(rgba(255, 180, 223, 0.32) 1px, transparent 1px);
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
 }
+
+html::-webkit-scrollbar { width: 0 !important }
+
 body {
     max-width: 51.0em;
     color:black;
@@ -95,27 +100,41 @@ p {
     margin: 0;
 }
 
-.dates {
-    color: #005a9b;
-    letter-spacing: 0.04em;
-    font-size: .75em;
-    font-style: italic;
-    font-weight: 500;
-    border: 1px solid;
-    border-radius: .15em;
-    padding: .1em .3em .1em .3em;
-    margin-right: .5em;
+#workhistory h2 {
+    
+}
+
+#workhistory ul {
+    padding:0;
+    margin:1.5em 0 0 0;
+    list-style: none;
+    line-height: 1em;
     white-space: nowrap;
 }
 
-//.dates::after {
-    content:"\000A";
-    white-space: pre;
+#workhistory li {
+    margin-bottom: .5em;
 }
 
+.dates {
+    color: #005a9b;
+    border-bottom: 1px dotted #005a9b;
+    font-size: 1.25em;
+    font-weight: 200;
+    width:50%;
+    padding: 0em 0 .66em 0;
+    margin: -.33em 0 1em 0;
+}
 
-#workhistory .dates {
-    margin: 0 0 0 .33em;
+.clients {
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: black;
+    list-style: none;
+}
+
+.clients::after {
+    content: " : ";
 }
 
 #about li {
@@ -207,18 +226,17 @@ p {
 
 .big-image {
     margin: 2em 0 0 0;
-    height: 100%;
 }
 
 .big-image img {
     max-width: 100%;
     border: 1px solid rgba(0, 90, 155, 0);
     display: block;
-    margin:auto;
     padding: 1em;
     margin: -1em;
-    transition: all 0.25s ease-out;
+    transition: border 0.25s ease-out;
     max-height:800px;
+
 }
 
 .big-image img:hover {
@@ -284,6 +302,8 @@ p {
     grid-area: content;
 }
 
+#content-container::-webkit-scrollbar { width: 0 !important }
+
 @media (max-width: 635px) {
     
     .container {
@@ -313,9 +333,16 @@ p {
         grid-column-gap:1em;
     }
     
+    .third-width {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+    }
+    
     #footer {
         font-size:.8em;
     }
+    
+    
     
 }
 
@@ -327,6 +354,7 @@ p {
             "content"
             "portfolio"
             "footer"; 
+        grid-row-gap: 1em;
     }
     
     h2 {
@@ -339,13 +367,12 @@ p {
         grid-column-gap:2em;
         grid-template-areas:
             "about info";
-        
     }
     
     .dates {
-        line-height: 2.5em;
+        width:100%;
     }
-
+    
 }
 
 @media (min-width: 1000px) {
@@ -359,11 +386,11 @@ p {
     }
     
     .container {
-        grid-template-columns: 1fr 2.15fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-areas: 
             "content portfolio"
             "content footer"; 
-        grid-column-gap:4em;
+        grid-column-gap:5em;
         padding: 4em;
     }
     
@@ -375,21 +402,21 @@ p {
     
     #content-container {
         display:block;
-        max-width: 27em;
-        width:28.5vw;
-        position:fixed;
-        margin: 0em 0 4em 4em;
-        padding: 3.5em 0 0 4px;
-        height:100vh;
+        position: sticky;
+        top:0em;
+        margin:-4em 0 -4em 0;
+        padding-top:4em;
+        padding-bottom: 0;
+        height: 100vh;
         overflow-y: scroll;
+        max-width:25em;
+        box-sizing: border-box;
     }
     
     #workhistory {
-        padding-bottom: 7em;
+        padding-bottom: 4em;
         margin-bottom: 0;
     }
-    
-    #content-container::-webkit-scrollbar { width: 0 !important }
     
     #about {
         border-bottom: 1px grey dotted;
@@ -411,6 +438,10 @@ p {
         float:right;
         margin-right:0em;
         margin-top:-1.2em;
+    }
+    
+    .dates {
+        width:50%;
     }
             
 }
