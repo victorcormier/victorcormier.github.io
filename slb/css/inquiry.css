@@ -1,0 +1,116 @@
+#content_container {
+    background: white;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.25em;
+    color: #000000;
+    margin-bottom:0;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight:400;
+    line-height: 1.25em;
+    color: rgb(166,166,166);
+    margin:.25em 0 1em 0;
+}
+
+.inquiry_container {
+    padding: 2em 2em;
+    max-width: 1000px;
+    margin:0 auto;
+}
+
+.inquiry {
+    font-size:1.2em;
+    
+}
+
+.inquiry_field {
+    width:100%;
+    margin:.25em 0 .75em 0;
+    font-size: 1em;
+    padding:.5em;
+    font-weight: 300;
+    line-height: 1em;
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    border:1px solid #d0d0d0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.inquiry_submit {
+    width:100%;
+    font-size: 1.2em;
+    font-weight: 300;
+    background:#0072bc;
+    color:#fff;
+    padding:.5em;
+    border:none;
+    cursor: pointer;   
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    border-radius: .33em;
+    margin-top:1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+}
+
+.inquiry_submit:hover {
+    background: #009bff;
+}
+
+.submit_grey {
+    background: #d0d0d0;
+}
+
+.thanks {
+    background:#ffba00;
+    color:black;
+    font-size: 1.2em;
+    padding:.5em;
+    border-radius: .33em;
+    margin-top:1em;
+    text-align: center;
+}
+
+.asterisk {
+    color:red;
+}
+
+
+/****   Vertical tablet and larger   ****/
+@media (min-width: 768px) {
+   
+    
+.inquiry_container {
+    padding: 1em 4em 4em 4em;
+}
+    
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-top: 2em;
+    margin-bottom: .25em;
+}
+    
+h2 {
+    font-size: 1.59em;
+    font-weight:100;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+    color:#0072bc;    
+}
+    
+.inquiry_field {
+    margin:.25em 0 1.5em 0;
+}
+
+ 
+}

@@ -1,0 +1,173 @@
+div.header {
+	padding-bottom: 8px;
+	position: relative;
+}
+
+td.td-login-link a, td.td-login-link a:visited {
+	color:#939598;
+}
+
+td.td-search-field {
+	height: 24px;
+}
+
+td.td-search-field-absolute {
+	position: absolute;
+	height: 24px;
+	top: 38px;
+}
+
+td.btn-search-chooser {
+	width:100px;	
+}
+
+.div-search {
+	width: 340px;
+}
+
+
+.search-field-absolute {
+	position: absolute;
+	height: 24px;
+	top: 38px;
+}
+
+
+.div-search input.search-box {
+	border: 0px;
+	background: none;
+	font-size: 12px;
+	padding: 2px 4px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #939598;
+	width:270px;
+	border-top: 1px solid #CDCDCD;
+	border-left: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+	height: 17px;
+	float: left;
+}
+
+
+.div-search .div-search-button {
+	background-image: url("../images/search_button.png");
+	float: left;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+/*
+input.search-box {
+	border: 0px;
+	background: none;
+	font-size: 12px;
+	padding: 0px 4px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #939598;
+	width:270px;
+	border-top: 1px solid #CDCDCD;
+	border-left: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+	height: 23px;
+}
+*/
+td.td-search-button {
+	background-image: url("../images/search_button.png");
+}
+td.td-text-field {
+	width:174px;	
+}
+div.header-links {width:300px;text-align:right;padding-top:16px;padding-bottom:7px;}
+div.header-links,
+div.header-links a {
+		color:#939598;
+		font-size:12px;
+}
+
+div.customerheader
+{
+    border-left: 1px solid #BFBFBF;
+    color: #000000;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 9px;
+    height: 40px;
+    margin-top: 15px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 150px;
+}
+div.customerheader img
+{
+    padding-top: 2px;
+    float: left;
+    border-style: none;
+}
+
+/* search dropdown
+ul.search-dropdown {
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:98px;
+	display:none;
+	overflow: hidden;
+}
+
+ul.search-dropdown li {	
+	border-left:1px solid #cdcdcd;	
+	border-right:1px solid #cdcdcd;	
+}
+
+ul.search-dropdown li a {
+	font-size:12px;
+	display:block;	
+	padding:4px;
+	padding-left: 6px;
+	border-bottom:1px solid #cdcdcd;
+	background-color:#FFF;
+	font-size:10px;
+	font-weight: bold;
+}
+
+ul.search-dropdown li:hover  {
+	border-left: 1px solid #4f89bf;
+	border-right: 1px solid #4f89bf;
+}
+
+ul.search-dropdown li a:hover  {
+	background-color:#4f89bf;
+	color:#FFF;
+	text-decoration:none;
+}
+
+div.btn-search-dropdown {
+	background-image: url('../images/btnSearchSlbNoText.gif');
+	width: 100px;
+	height: 23px;
+	border-right: 1px solid #cdcdcd;
+	font-weight: bold;
+}
+
+div.btn-search-dropdown a 
+{
+	font-size:10px;
+	display:block;
+	padding: 5px;
+	text-decoration:none;
+	cursor: pointer;
+}
+
+div.login-search-box {
+	position: absolute;
+	left: 661px;
+	z-index: 600;
+}*/
+
+/* Menu Styles */
+.menu-main {
+	height:33px;	
+	position:relative; /* to make the=menu work */
+	z-index:500;/* lift over the top module div */
+}

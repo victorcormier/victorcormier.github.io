@@ -1,0 +1,179 @@
+div.TabsWrapper
+{
+    background-image: url("../images/tabs/bg_bottom_dkgray_repeat.jpg");
+    background-repeat: repeat-x;
+    width:478px;
+    left: -20px;
+    position:relative;
+}
+
+table.TabsTable
+{
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 19px;
+}
+
+table.TabContentWrapper
+{
+    width: 440px;
+}
+
+div.TabsWrapperWide
+{
+    background-image: url("../images/tabs/bg_bottom_dkgray_repeat.jpg");
+    background-repeat: repeat-x;
+    width: 739px;
+    left: -19px;
+    position: relative;
+    float: left;
+}
+
+table.TabsTableWide
+{
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 19px;
+}
+
+table.TabContentWrapperWide
+{
+    width: 700px;
+}
+
+/* moving this into layout.css to cover all body content
+table.tabContent ul
+{
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    margin-bottom: 12px;
+}
+
+table.tabContent li
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    display: block;
+    padding: 0px 0px 0px 10px;
+    background-image: url("../images/list-square-icon.gif");
+    background-repeat: no-repeat;
+    background-position: left 8px;
+}*/
+div#libraryTabsContainer
+{
+    padding-top: 20px;
+    padding-left: 10px;
+    height: 30px;
+    border-bottom: 1px solid #c8c8c8;
+    background-image: url("../images/tabs/LibraryTabBackground.gif");
+    background-repeat: repeat-x;
+    position: relative;
+    left: -20px;
+    width: 729px;
+}
+
+div#libraryTabsContainer div
+{
+    float: left;
+    padding: 0px 15px;
+    border-left: 1px solid #3e9ece;
+    text-align: center;
+}
+
+div#libraryTabsContainer div.libraryTabFirst
+{
+    border-left: none;
+}
+
+div#libraryTabsContainer div a, div#libraryTabsContainer div
+{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* table or results */
+
+table.tabContent
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0px none;
+}
+
+table.tabContent table.libraryTable
+{
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 700px;
+    border-bottom: 1px solid #c8c8c8;
+    margin-bottom: 10px;
+}
+
+table.tabContent table.libraryTable td
+{
+    padding: 6px;
+    color: #58595d;
+    vertical-align: top;
+}
+
+table.tabContent table.libraryTable td a
+{
+    font-weight: bold;
+}
+
+/* table header */
+table.tabContent table.libraryTable tr.libraryTableHeader td
+{
+    border-top: 1px solid #c8c8c8;
+    border-bottom: 1px solid #c8c8c8;
+    background-image: url("../images/tabs/LibraryHeaderBackground.gif");
+    background-repeat: repeat-x;
+    padding: 6px 0px 6px 4px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* tabscontrol.css:34 */
+div.TabsWrapperWide table.TabsTableWide
+{
+    margin-bottom: 0px;
+}
+
+div.TabsWrapperWide
+{
+    top: 1px;
+    z-index: 2;
+}
+
+
+div.librarySeeAllButton a {
+	color: #636363;
+}
+
+div.librarySeeAllButton div {
+  margin-bottom: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	background: url("../images/tabs/btn_left.gif") no-repeat;
+	padding-top: 6px;
+	width: 6px;
+	height: 23px;
+	float: left;
+	font-weight: bold;
+}
+
+div.librarySeeAllButton div+div {
+	background: url("../images/tabs/btn_center.gif") repeat-x;
+	width: auto;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+div.librarySeeAllButton div+div+div {
+	background: url("../images/tabs/btn_right.gif") no-repeat;
+	width: 6px;
+	padding-left: auto;
+	padding-right: auto;
+}

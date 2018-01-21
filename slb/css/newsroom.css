@@ -1,0 +1,19 @@
+﻿/* Newsroom styles */
+
+div.widget-press-contacts {
+	margin:10px 0px 10px 20px;
+}
+
+div.newsroom-sign-up {
+	margin-top:6px;
+}
+
+
+table.tbl-signup-options {
+	margin-top:8px;
+	margin-left:-4px;
+}
+
+table.tbl-signup-options td.td-checkbox  {
+	padding-right:2px;
+}

@@ -283,8 +283,10 @@ p {
     transition: all 0.25s ease-out;
 }
 
-.buttons::before {
-    content: "🔗 ";
+.icons {
+    width:.75em;
+    vertical-align: -.16em;
+    margin-right: .4em;
 }
 
 .buttons:hover {

@@ -1,0 +1,155 @@
+.NomElement
+{
+	border-right: solid 1px dimgray;
+	line-height: 20px;
+	padding-right: 5px;
+}
+.NomDesc
+{
+	color: darkgray;
+	font-family: arial;
+	font-size: 8pt;
+	line-height: 12px;
+}
+.NomValue
+{
+	background-color: lightgrey;
+	border: solid 1px dimgray;
+	color: black;
+	font-family: Arial;
+	font-size: 18pt;
+	font-weight: bold;
+}
+.NomConst
+{
+	background-color: #509173;
+	border: solid 1px dimgray;
+	color: white;
+	font-family: Arial;
+	font-size: 18pt;
+	font-weight: bold;
+}
+.AvailHeader
+{
+	background-image: url("https://www.slb.com/css/Images/ProdInfoHeader920X101.jpg");
+	background-repeat: no-repeat;
+	color: darkgray;
+	font-family: Arial;
+	font-size: 18pt;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: bold;
+	height: 40px;
+	padding-right: 25px;
+	padding-top: 70px;
+	text-align: right;
+}
+.AvailDesc
+{
+	font-family: Arial;
+	font-size: 10pt;
+	padding-right: 10px;
+	text-align: justify;
+	text-justify: distribute;
+}
+.AvailFooter
+{
+	background-image: url("https://www.slb.com/css/Images/ProdInfoFooter920X78.jpg");
+	background-repeat: no-repeat;
+	height: 83px;
+	padding-bottom: 5px;
+}
+.AvailProdLine
+{
+	color: forestgreen;
+	font-family: Arial;
+	font-size: 18pt;
+	font-weight: bold;
+	line-height: 30px;
+	padding-bottom: 10px;
+	padding-top: 3px;
+}
+.AvailTitle
+{
+	background-color: #336666;
+	color: white;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.AvailSize
+{
+	background-color: #e4e4e4;
+	border-bottom: #006699 thin;
+	border-left: #006699 thin;
+	border-right: #006699 thin;
+	border-top: #006699 thin;
+	color: #666666;
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+}
+.AvailBitsOdd
+{
+	background-color: ghostwhite;
+	border-bottom: gainsboro thin solid;
+	border-left: #006699 thin;
+	border-right: #006699 thin;
+	border-top: #006699 thin;
+	color: black;
+	font-family: Arial;
+	font-size: 10pt;
+	text-align: left;
+}
+.AvailBitsEven
+{
+	background-color: white;
+	border-bottom: gainsboro thin solid;
+	border-left: #006699 thin;
+	border-right: #006699 thin;
+	border-top: #006699 thin;
+	color: black;
+	font-family: Arial;
+	font-size: 10pt;
+	text-align: left;
+}
+.AvailFooter
+{
+	color: white;
+	font-family: Arial;
+	font-size: 8pt;
+}
+.AvailDefault
+{
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: none;
+	text-decoration: none;
+}
+a.AvailLink:link, a.AvailLink:active, a.AvailLink:visited
+{
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: none;
+	text-decoration: none;
+}
+a.NoAvailLink:link, a.NoAvailLink:active, a.NoAvailLink:visited,a.NoAvailLink:hover
+{
+	color: black;
+	cursor: default;
+	cursor: text;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: none;
+	text-decoration: none;
+}
+a.AvailLink:hover
+{
+	color: DarkGreen;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: underline;
+}

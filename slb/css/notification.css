@@ -1,0 +1,50 @@
+/* Notification Styles */
+div.header-notice {
+	background:url("../images/background_header_notice.jpg") repeat-x;
+	height:106px;
+	width:100%;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+.header-notice-text {
+	width:800px;
+	padding:15px 0 0 20px;
+	float:left;
+	font:12px Bold Arial, Helvetica, sans-serif;
+}
+
+.header-notice-text a {
+	font-weight:bold;	
+}
+
+.header-notice-btn {
+	width:66px;
+	text-align:right;
+	float:right;
+	margin:15px 20px 0 0;
+	position: relative;
+}
+
+.header-notice-btn img {
+    cursor: pointer;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.header-notice-btn-div {
+	position: absolute;
+	top: 4px;
+	left: 0px;
+	width:66px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.header-notice-btn-text {
+	font-size: 10pt;
+	font-weight: bold;
+	color: #fff;
+	margin: auto;	
+	text-align: center;
+}
